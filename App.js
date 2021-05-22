@@ -9,9 +9,7 @@
 import React from 'react';
 import type {Node} from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
+
   StyleSheet,
   Text,
   ImageBackground,
@@ -19,13 +17,7 @@ import {
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+
 import {BlurView} from '@react-native-community/blur';
 import LinearGradient from 'react-native-linear-gradient';
 const Section = ({children, title}): Node => {
@@ -46,31 +38,51 @@ const App: () => Node = () => {
 
   return (
 
-         <ImageBackground  style={{backgroundColor:'white',flexGrow:1}} source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkETvWa6dBuO9BqTBnOVjQWx5DnYNuH6Rw-mxzeGHKX5_YjBKorxQckzXezFdxX4sUnA&usqp=CAU'}}>
+         <ImageBackground  style={{backgroundColor:'white',flexGrow:1,justifyContent:'center'}} source={{uri:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkETvWa6dBuO9BqTBnOVjQWx5DnYNuH6Rw-mxzeGHKX5_YjBKorxQckzXezFdxX4sUnA&usqp=CAU'}}>
 
-          <BlurView
-             blurType="light" 
-            blurAmount={20}
-            style={styles.cardContainer}>
-            <LinearGradient
-              colors={['rgba(0,0,0,0.09)', 'rgba(0,0,0,0.1)']}
-              start={{x: 0, y: 1}}
-              end={{x: 1, y: 1}}
-              useAngle
-              angle={110}
-              style={styles.card}
-            >
-                 <Text style={{textAlign:'center',color:'#fff',marginTop:10,fontSize:22}}>Mr Chips</Text>
-                 <Text style={{textAlign:'center',color:'#fff',fontSize:20,marginTop:40}}>676767676 7676 7676767676</Text>
-                 <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:20}}>
-                 <Text style={{textAlign:'left',color:'#fff',fontSize:22,marginTop:50}}>12/24</Text>
-                 <Text style={{textAlign:'left',color:'blue',fontSize:22,marginTop:50,fontWeight:'bold'}}>VISA</Text>
-                   </View>
+       <BlurView
+       
+       style={{
+        width:350,
+        height:200,
+        alignSelf:'center',
+        borderRadius:20,
+        borderWidth:.1
 
-              </LinearGradient>
+       }}
+       blurType="light"
+       blurAmount={20}
+       >
 
-          
-          </BlurView>
+{/* <LinearGradient 
+      colors={['rgba(0,0,0,0,.9)', 'rgba(0,0,0,0,.1)']} 
+      start={{ x: 0, y: 1}} 
+      end={{ x: 1, y: 1 }}
+      useAngle
+      angle={110}
+      style={{
+      height:'100%',
+      width:'100%',
+}}
+
+> */}
+    <Text style={{textAlign:'center',color:'#fff',marginTop:10,fontSize:22}} >Mr Chips </Text>
+    <Text style={{textAlign:'center',color:'#fff',marginTop:40,fontSize:22}} >6767676 676767677676 676767 </Text>
+
+<View style={{
+      flexDirection:'row',
+      marginHorizontal:20,
+      alignItems:'center',
+      justifyContent:'space-between',
+      
+}} >
+ <Text style={{textAlign:'center',color:'#fff',marginTop:40,fontSize:22}} >12/24 </Text>
+    <Text style={{textAlign:'center',color:'#fff',marginTop:40,fontSize:22,color:'blue'}} >VISA </Text>
+
+  </View>
+
+  {/* </LinearGradient> */}
+       </BlurView>
        
       </ImageBackground>
 
